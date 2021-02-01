@@ -10,6 +10,7 @@ class MyClient(discord.Client):
         if message.author.id == self.user.id:
             return
         else:
+            # change the ID in the brackets to the desired output channel
             output = client.get_channel(427809865281437696)
             await output.send(f"**ID:** {message.author.id}\n**Name:** {message.author.name}#{message.author.discriminator}\n**Nick:** {message.author.nick}\n**Channel:** {message.channel}\n >>> {message.content}")
 
