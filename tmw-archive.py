@@ -10,11 +10,8 @@ class MyClient(discord.Client):
         if message.author.id == self.user.id:
             return
         else:
-            print("1")
             output = client.get_channel(427809865281437696)
-            print("2")
-            await output.send(f"<@{message.author.id}> {message.author.name}#{message.author.discriminator}: {message.content}")
-            print("3")
+            await output.send(f"**ID:** {message.author.id}\n**Name:** {message.author.name}#{message.author.discriminator}\n**Nick:** {message.author.nick}\n**Channel:** {message.channel}\n >>> {message.content}")
 
 client = MyClient()
 client.run(token)
