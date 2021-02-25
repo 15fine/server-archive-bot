@@ -33,4 +33,4 @@ def archive(chnl):
     elif chnl == 799752251610628096:
         return 806085911330291718
 
-Client().run(token)
+Client().run()
